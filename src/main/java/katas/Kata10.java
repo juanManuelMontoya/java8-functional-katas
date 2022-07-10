@@ -54,6 +54,7 @@ import java.util.stream.Collectors;
 public class Kata10 {
     public static List<Map> execute() {
         List<Map> lists = DataUtil.getLists();
+
         List<Map> videos = DataUtil.getVideos();
 
         return lists.stream().map(list -> ImmutableMap.of("name", list.get("name"), "videos", videos.stream()
